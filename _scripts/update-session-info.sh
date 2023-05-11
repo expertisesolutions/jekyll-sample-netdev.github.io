@@ -50,4 +50,9 @@ curl -sS \
   --header "Sec-Fetch-User: ?1" \
   --header "Upgrade-Insecure-Requests: 1" > _data/schedule.json
 
+if [ -z "$(cat _data/schedule.json)" ];
+then
+  echo "[]" > _data/schedule.json
+fi
+
 rm $cookiesfile
