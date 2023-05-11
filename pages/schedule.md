@@ -9,21 +9,23 @@ order: 7
 
 # Schedule
 
-* There's no need to log in for the schedule below *
+TBD
 
 {% comment %} 
+* There's no need to log in for the schedule below *
+
 Times below are listed in UTC. If you add this to your own Google Calendar using the 
 button at the bottom of this page, you'll be able to view the schedule in your preferred timezone.
 
 Note that when viewing the schedule on the <a href="virtual.html">virtual conference platform</a> 
 the timezone will be different, so please be aware of that and make sure you notice which timezone is displayed.
-{% endcomment %}
 
 
 <!-- default view -->
 <a id="sched-embed" href="//myfoobar2022.sched.com/">View the Netdev 0x16 Conference schedule &amp; directory.</a>
 <script type="text/javascript" src="//myfoobar2022.sched.com/js/embed.js"></script>
 
+{% endcomment %}
 <!-- expanded -->
 {% comment %} 
  <a id="sched-embed" href="//myfoobar2022.sched.com/list/descriptions/">View the Netdev 0x16 Conference schedule &amp; directory.</a>

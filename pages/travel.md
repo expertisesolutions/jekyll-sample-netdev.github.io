@@ -8,26 +8,23 @@ order: 4
 
 # Travel
 
-{% comment %} Details coming soon.
+Details coming soon.
+{% comment %} 
 
 ### The conference will be fully-virtual this time, so no travel is required.
 
-{% endcomment %}
 
 - [Visa information](#assistance)
 - [Travel to Lisbon](#venue)
 - [Hotel Recommendations](#hotel)
-{% comment %}- [Getting to the venue](#hotel)
+- [Getting to the venue](#hotel)
 - [VAT info](#VAT)
-{% endcomment %}
 
-{% comment %}
 
 ## Assistance for visitors to Canada
 
 #### Note: There are new requirements for entering Canada if you do not have a visa and if you are not from the United States. See [here](#eTA) for more info and some links.
 
-{% endcomment %}
 
 ## Assistance for visitors to Portugal
 
@@ -35,20 +32,21 @@ Foreign attendees might need an invitation letter in order to obtain a visa to g
 
 After you have registered, we can issue you an invitation letter on request. Send an email to [registrar@netdevconf.info](mailto:registrar@netdevconf.info) with a request for a letter. We will arrange to get the required information, which we will put into a letter, print, sign and send to you by postal mail.
 
-{% comment %}
 
 Canadian Border Services has some information for [Visitors to Canada](http://www.cbsa-asfc.gc.ca/travel-voyage/ivc-rnc-eng.html). That page has information about the Electronic Travel Authorisation (eTA), and visas.
 
 If you dont need a visa to get to Canada (EU folks) then you will need to get an ETA. Please visit this site: [http://www.cic.gc.ca/english/visit/eta.asp](http://www.cic.gc.ca/english/visit/eta.asp) And for a quick test of whether you need it go here: [http://www.cic.gc.ca/english/visit/visas.asp](http://www.cic.gc.ca/english/visit/visas.asp)
 
-The list of countries whose citizens need a visa to enter Canada is [here](http://www.cic.gc.ca/english/visit/visas.asp). {% endcomment %}
+The list of countries whose citizens need a visa to enter Canada is [here](http://www.cic.gc.ca/english/visit/visas.asp). 
 
 It is up to you to determine the requirements and comply with them.
 
 ## Travel to Lisbon: Getting to the venue
 
 Netdev 0x16 will be held at Centro de Congressos do Instituto Superior Técnico, located at Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal:  
-[https://centrocongressos.tecnico.ulisboa.pt/en/](https://centrocongressos.tecnico.ulisboa.pt/en/) {% comment %} Netdev 0x16 will be held at Pinnacle Hotel Harbourfront, 1133 West Hastings Street, Vancouver, BC, V6E 3T3; located in the heart of downtown Vancouver:  
+[https://centrocongressos.tecnico.ulisboa.pt/en/](https://centrocongressos.tecnico.ulisboa.pt/en/) 
+
+Netdev 0x16 will be held at Pinnacle Hotel Harbourfront, 1133 West Hastings Street, Vancouver, BC, V6E 3T3; located in the heart of downtown Vancouver:  
 [https://www.pinnacleharbourfronthotel.com](https://www.pinnacleharbourfronthotel.com) Use the following link to get a discount at the hotel:  
 ## https://book.passkey.com/event/49982146/owner/2075/home](https://book.passkey.com/event/49982146/owner/2075/home) [https://www.pinnacleharbourfronthotel.com/
 
@@ -81,7 +79,6 @@ You will take the Canada Line to Waterfront station stop. From this station it i
 
 Please note that Uber has recently started operating in Vancouver, so that's an option for getting around as well.
 
-{% endcomment %}
 
 ## Hotel Recommendations
 
@@ -121,7 +118,7 @@ Exe Saldanha
 Av. Defensores de Chaves 5, 1000-109 Lisboa, Portugal  
 750 m from hotel
 
-{% comment %} More info coming soon.
+More info coming soon.
 
 - [Visa information](#assistance)
 - [Travel to Prague](#hotel)

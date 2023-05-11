@@ -7,9 +7,9 @@ pagination:
 enabled: true
 order: 1
 ---
-# Netdev 0x16, THE Technical Conference on Linux Networking
+# Netdev 0x17, THE Technical Conference on Linux Networking
 
-Netdev 0x16 is scheduled to be in Lisbon Portugal tentatively on October 24th - 28th.
+Netdev 0x17 is scheduled to be in Vancouver, British Columbia, Canada on October 30th to November 3rd.
 
 {% comment %}
 
@@ -17,7 +17,7 @@ Netdev 0x16 is scheduled to be fully virtual in July 2021 with the following ten
 
 {% endcomment %}
 
-Netdev 0x16, like all the previous netdev conferences, is a conference of the netdev community, by the netdev community, for the netdev community. Linux kernel networking and user space utilization of the interfaces to the Linux kernel networking subsystem are the focus. If you are using Linux as a boot system for proprietary networking, then this conference \_may not be for you\_.
+Netdev 0x17, like all the previous netdev conferences, is a conference of the netdev community, by the netdev community, for the netdev community. Linux kernel networking and user space utilization of the interfaces to the Linux kernel networking subsystem are the focus. If you are using Linux as a boot system for proprietary networking, then this conference \_may not be for you\_.
 
 ---
 

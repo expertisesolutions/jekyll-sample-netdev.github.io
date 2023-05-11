@@ -9,6 +9,10 @@ order: 3
 
 # Registration
 
+Details coming soon.
+
+{% comment %}
+
 If you yearn for the old community tech driven conferences where you mingle with fellow Linux networking geeks then this would be it. While there will be a heavy Linux kernel influence we expect a lot of user space presence as well.
 
 Netdev 0x16 is in Lisbon Portugal, starting October 24th, 2022. You can also attend virtually if you prefer.
@@ -42,11 +46,12 @@ Students get a discount with valid student ID.
     - Virtual - $100 USD
     - Virtual (student) - $40 USD
 
+{% endcomment %}
 {% comment %} - To be announced.  **Virtual Conference Rate (remote participation)** {% endcomment %} 
+{% comment %}
 
 ### Attendee Information & Guides
 
-{% comment %}
 
 If you're attending, consider reading these guides which will help you enjoy the virtual conference format more easily:  
 ## https://netdevconf.info/0x16/Attendee-Information-and-Guides.html
@@ -54,6 +59,7 @@ If you're attending, consider reading these guides which will help you enjoy the
 We will mail a tshirt and badge (already printed) to the first 250 people who register. If you cancel registration after the tshirt and badge are shipped, you will be subject to the 50% refund instead of the 7% processing fee.
 
 {% endcomment %}
+{% comment %}
 
 ---
 
@@ -65,18 +71,17 @@ Before you register, please send an email to [registrar@netdevconf.info](mailto:
 
 ### Speaker Information & Guides
 
+{% endcomment %}
 {% comment %}
 
 If you're one of the speakers at the conference, read these guides before your session please. It's important to read this so your session can happen smoothly on the virtual conference platform:  
 ## https://netdevconf.info/0x16/Speaker-Information-and-Guides.html
 
-{% endcomment %}
 
 ### Students
 
 Before you register, please send an email to [registrar@netdevconf.info](mailto:registrar@netdevconf.info?Subject=StudentRegistration) with your complete name, student ID verification and affiliation (e.g., university). You will receive an invitation code once you're accepted. Students we accept will receive a 50% discount on the regular ticket price.
 
-{% comment %}
 
 ## Registration site:
 
@@ -91,13 +96,13 @@ The registration site information is coming soon. [Proceed to registration page 
 Information on travel to venue and travel assistance can be found on [the Travel & Hotel page](travel.html#hotel).
 
 {% endcomment %}
+{% comment %}
 
 ---
 
 ## Cancellation Policy
 
   
-{% comment %}
 
 **Info for people who wish to cancel because the date changed and the conference is now virtual:**  
   
@@ -111,4 +116,8 @@ Note that if you qualify for the tshirt and badge, and you cancel registration a
 
 {% comment %} **Our regular cancellation policy, which applies in all other cases:**  
   
-{% endcomment %} If you need to cancel before the conference, we can offer you a 50% refund if you contact us early enough. For more information, send an email to [registrar@netdevconf.info](mailto:registrar@netdevconf.info).
+{% endcomment %} 
+
+{% comment %} 
+If you need to cancel before the conference, we can offer you a 50% refund if you contact us early enough. For more information, send an email to [registrar@netdevconf.info](mailto:registrar@netdevconf.info).
+{% endcomment %} 

@@ -8,12 +8,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Netdev 0x16
+title: Netdev 0x17
 subtitle:
 email:
 name: 
 description: >
-  Netdev 0x16 Copyright © 2014-2022 The Netdev Society.
+  Netdev 0x17 Copyright © 2014-2023 The Netdev Society.
 
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
@@ -63,113 +63,113 @@ sponsors:
   ##### Platinum
 
   # Juniper Networks
-  - type: platinum
-    url: https://www.juniper.net/
-    img: juniper.png
-    alt: Juniper Networks logo
+  # - type: platinum
+    # url: https://www.juniper.net/
+    # img: juniper.png
+    # alt: Juniper Networks logo
 
   # Google
-  - type: platinum
-    url: https://opensource.google/
-    img: logo_Google_FullColor_1x_722x237px-s.png
-    alt: Google Logo
+  # - type: platinum
+    # url: https://opensource.google/
+    # img: logo_Google_FullColor_1x_722x237px-s.png
+    # alt: Google Logo
 
   # Intel
-  - type: platinum
-    url: https://www.intel.com/
-    img: Intel-logo-nobox-small.png
-    alt: Intel logo
+  # - type: platinum
+    # url: https://www.intel.com/
+    # img: Intel-logo-nobox-small.png
+    # alt: Intel logo
 
   ##### Gold
 
   # Meta
-  - type: gold
-    url: https://engineering.fb.com/
-    img: meta.png
-    alt: Meta logo
+  # - type: gold
+    # url: https://engineering.fb.com/
+    # img: meta.png
+    # alt: Meta logo
 
   # Bloomberg
-  - type: gold
-    url: https://www.bloomberg.com
-    img: bloomberg-s.png
-    alt: Bloomberg logo
+  # - type: gold
+    # url: https://www.bloomberg.com
+    # img: bloomberg-s.png
+    # alt: Bloomberg logo
 
   ##### Silver
 
   # AMD
-  - type: silver
-    url: https://www.amd.com
-    img: AMD_E_Blk_RGB-s.jpg
-    alt: AMD logo
+  # - type: silver
+    # url: https://www.amd.com
+    # img: AMD_E_Blk_RGB-s.jpg
+    # alt: AMD logo
 
   ##### Bronze
 
   # Tempesta
-  - type: bronze
-    url: https://tempesta-tech.com/
-    img: tempesta_technologies_logo-s.png
-    alt: Tempesta Technologies logo
+  # - type: bronze
+    # url: https://tempesta-tech.com/
+    # img: tempesta_technologies_logo-s.png
+    # alt: Tempesta Technologies logo
 
   # Zevenet
-  - type: bronze
-    url: https://www.zevenet.com/
-    img: Zevenet_Logo_official_bg_white.png
-    alt: Zevenet logo
+  # - type: bronze
+    # url: https://www.zevenet.com/
+    # img: Zevenet_Logo_official_bg_white.png
+    # alt: Zevenet logo
 
   # Mojatatu
-  - type: bronze
-    url: http://www.mojatatu.info/mojatatu
-    img: mojatatu.png
-    alt: Mojatatu Logo
+  # - type: bronze
+    # url: http://www.mojatatu.info/mojatatu
+    # img: mojatatu.png
+    # alt: Mojatatu Logo
 
   # Secunet
-  - type: bronze
-    url: https://www.secunet.com
-    img: secunet-s.jpg
-    alt: secunet logo
+  # - type: bronze
+    # url: https://www.secunet.com
+    # img: secunet-s.jpg
+    # alt: secunet logo
 
   # Gcore
-  - type: bronze
-    url: https://gcorelabs.com/
-    img: gcore-labs-s.png
-    alt: gcore logo
+  # - type: bronze
+    # url: https://gcorelabs.com/
+    # img: gcore-labs-s.png
+    # alt: gcore logo
 
   # bytedance
-  - type: bronze
-    url: https://www.bytedance.com
-    img: ByteDance-logo-RGB-fullcolor-s.png
-    alt: bytedance logo
+  # - type: bronze
+    # url: https://www.bytedance.com
+    # img: ByteDance-logo-RGB-fullcolor-s.png
+    # alt: bytedance logo
 
   # haproxy
-  - type: bronze
-    url: https://www.haproxy.com/
-    img: HAProxy-Logo-s.png
-    alt: haproxy logo
+  # - type: bronze
+    # url: https://www.haproxy.com/
+    # img: HAProxy-Logo-s.png
+    # alt: haproxy logo
 
   # nvidea
-  - type: bronze
-    url: https://www.nvidia.com
-    img: nvidia-s.jpg
-    alt: nvidia logo
+  # - type: bronze
+    # url: https://www.nvidia.com
+    # img: nvidia-s.jpg
+    # alt: nvidia logo
 
   # jump trading
-  - type: bronze
-    url: https://www.jumptrading.com/
-    img: jump-trading-s.jpg
-    alt: jump trading logo
+  # - type: bronze
+    # url: https://www.jumptrading.com/
+    # img: jump-trading-s.jpg
+    # alt: jump trading logo
 
   # openvpn
-  - type: bronze
-    url: https://openvpn.net/
-    img: OpenVPN-Logo-orange-white-2018-s.png
-    alt: openvpn logo
+  # - type: bronze
+    # url: https://openvpn.net/
+    # img: OpenVPN-Logo-orange-white-2018-s.png
+    # alt: openvpn logo
 
   ##### Community
 
   ##### Media
 
   # LWN
-  - type: media
-    url: https://lwn.net/
-    img: lwn-s.png
-    alt: LWN.net logo
+  # - type: media
+    # url: https://lwn.net/
+    # img: lwn-s.png
+    # alt: LWN.net logo

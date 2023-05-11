@@ -10,7 +10,7 @@ order: 8
 
 The Netdev conference focuses on networking based on Linux kernel and its associated user APIs.
 
-Netdev 0x16 (Netdev “twenty-two”) will be in Lisbon Portugal, starting October 24th, 2022. More details will be announced soon.
+Netdev 0x17 (Netdev “twenty-three”) will be in Vancouver Canada, starting October 30th, 2023. More details will be announced soon.
 
 {% comment %}
 
@@ -26,13 +26,12 @@ Netdev 0x16 (Netdev “twenty-two”) will be in Lisbon Portugal, starting Octob
 
 ## Submissions Overview
 
-{% comment %}
 
 A call for submissions will be announced soon, stay tuned!
 
-{% endcomment %}
+{% comment %}
 
-Netdev Society is excited to be accepting submissions for Netdev 0x16. We
+Netdev Society is excited to be accepting submissions for Netdev 0x17. We
 encourage early submissions incrementally rather than wait to submit at the
 last minute before the deadline.
 
@@ -55,9 +54,9 @@ cleared upfront and no reviewer is able to see the submitters name or
 organization.
 
 Our Program Committee is listed here:
-[https://netdevconf.info/0x16/about-us.html#Committees](https://netdevconf.info/0x16/about-us.html#Committees)
+[https://netdevconf.info/0x17/about-us.html#Committees](https://netdevconf.info/0x17/about-us.html#Committees)
 
-For Netdev 0x16 the following is a sample space of topics of interest:
+For Netdev 0x17 the following is a sample space of topics of interest:
 
 - Machine learning as related to networking
 - Communication patterns
@@ -143,7 +142,7 @@ When you make a submission, make sure you indicate what label best applies.
 Proposal submissions guidelines:
 
 1.  Create a new account on:
-    [https://0x16.netdevconf.info](https://0x16.netdevconf.info)
+    [https://0x17.netdevconf.info](https://0x17.netdevconf.info)
 2.  Check your email for a verification link.
 3.  Log into the submissions site using your new account (same link as from
     step 1)
@@ -176,3 +175,5 @@ of September 7th 2022.
 - Bursaries [info](bursaries.html)
 - Ombudsman [info](ombudsman.html)
 - Workflow [info](pc_review.html)
+
+{% endcomment %}

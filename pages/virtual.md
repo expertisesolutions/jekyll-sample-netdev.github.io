@@ -1,13 +1,16 @@
 ---
-layout: fullscreen
+#layout: fullscreen
+layout: default
 title: Virtual
 main_nav: true
 order: 5
 ---
 
-<iframe src="https://www.airmeet.com/e/626d32f0-3831-11ed-92e2-f3f6a456f804" id="airmeet-event-iframe" name="airmeet-event-iframe" width="100%" height="2000px" style="height: 98vh;" frameborder="0" marginheight="0" marginwidth="0" allow="camera *;microphone *"></iframe>
+Details comming soon
 
 {% comment %}
+<iframe src="https://www.airmeet.com/e/626d32f0-3831-11ed-92e2-f3f6a456f804" id="airmeet-event-iframe" name="airmeet-event-iframe" width="100%" height="2000px" style="height: 98vh;" frameborder="0" marginheight="0" marginwidth="0" allow="camera *;microphone *"></iframe>
+
 # Welcome to Netdev 0x16!
 
 ### Come back soon for info about attending virtually. **Vancouver is a vibrant and ethnically diverse city surrounded by breathtaking sea and mountain views.**
