@@ -4,12 +4,12 @@
 # documentation.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to production
+name: Deploy to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["production"]
+    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,7 +22,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "deploy"
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -43,15 +43,21 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: ruby _scripts/import-sessions.rb && bundle exec jekyll build --baseurl '/0x16' --destination './_site/0x16'
+        run: ruby _scripts/import-sessions.rb && bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v1
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Deploy to GitHub Pages
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.deploy_host }}
-          username: ${{ secrets.deploy_user }}
-          password: ${{ secrets.deploy_password }}
-          port: ${{ secrets.deploy_port }}
-          source: "./_site/*"
-          target: "/var/www/html/"
+        id: deployment
+        uses: actions/deploy-pages@v1

@@ -1,0 +1,67 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy 0x16 Staging
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["0x16-staging"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "deploy"
+  cancel-in-progress: true
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Fetch Sessions
+        # set environment variables for schedule update
+        env:
+          H_URL: ${{ secrets.hotcrp_url }}
+          H_USER: ${{ secrets.hotcrp_user }}
+          H_PWD: ${{ secrets.hotcrp_password }}
+        # rewrites _data/schedule and commit if there are any changes
+        run: |
+          bash _scripts/update-session-info.sh
+          [ -n "$(git diff HEAD -- _data/schedule.json)" ] \
+          && git config user.name github-actions \
+          && git config user.email github-actions@github.com \
+          && git add _data/schedule.json \
+          && git commit -m "update session information" \
+          && git push \
+          || true
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+        with:
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Build with Jekyll
+        # Outputs to the './_site' directory by default
+        run: ruby _scripts/import-sessions.rb && bundle exec jekyll build --baseurl '/staging/0x17' --destination './_site/0x17'
+        env:
+          JEKYLL_ENV: production
+      - name: Deploy to GitHub Pages
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.staging_host }}
+          username: ${{ secrets.staging_user }}
+          port: ${{ secrets.staging_port }}
+          key: ${{ secrets.staging_priv_key }}
+          source: "./_site/*"
+          target: ${{ secrets.staging_path }}

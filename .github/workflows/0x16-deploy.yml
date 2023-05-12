@@ -4,12 +4,12 @@
 # documentation.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Staging Jekyll site to Pages
+name: Deploy 0x16 to production
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["0x16"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,7 +22,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "deploy"
   cancel-in-progress: true
 
 jobs:
@@ -32,22 +32,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Fetch Schedule
-        # set environment variables for schedule update
-        env:
-          H_URL: ${{ secrets.hotcrp_url }}
-          H_USER: ${{ secrets.hotcrp_user }}
-          H_PWD: ${{ secrets.hotcrp_password }}
-        # rewrites _data/schedule and commit if there are any changes
-        run: |
-          bash _scripts/update-session-info.sh
-          [ -n "$(git diff HEAD -- _data/schedule.json)" ] \
-          && git config user.name github-actions \
-          && git config user.email github-actions@github.com \
-          && git add _data/schedule.json \
-          && git commit -m "update session information" \
-          && git push \
-          || true
       - name: Setup Ruby
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
@@ -59,21 +43,15 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: ruby _scripts/import-sessions.rb && bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: ruby _scripts/import-sessions.rb && bundle exec jekyll build --baseurl '/0x16' --destination './_site/0x16'
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v1
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Deploy to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.deploy_host }}
+          username: ${{ secrets.deploy_user }}
+          port: ${{ secrets.deploy_port }}
+          key: ${{ secrets.deploy_priv_key }}
+          source: "./_site/*"
+          target: ${{ secrets.deploy_path }}
