@@ -1,6 +1,6 @@
-# Netdev 0x16 Jekyll Theme
+# Netdev 0x17
 
-A port of the current layout of [netdevconf.info/0x16](https://netdevconf.info/0x16) to Jekyll.
+A port of the current layout of [netdevconf.info/0x16](https://netdevconf.info/0x17) to Jekyll.
 
 Built upon the [Centrarium theme](https://github.com/bencentra/centrarium).
 
@@ -13,28 +13,50 @@ directory, and **sessions** to `sessions/<type>/_drafts`. Create your pages
 with the proper Jekyll front matter (see [posts](#posts) bellow for an
 example).
 
-This project uses Github Actions for deployment in staging (gh-pages) and production (VPS).
-It will listen for pushes/merges to the branches `master` and `production`. 
+You can run the page locally without installing the environment by running a docker image:
+```
+export JEKYLL_VERSION=3.8
+docker run --rm \
+  --volume="$PWD:/srv/jekyll:Z" \
+  -it -p 4000:4000 \
+  jekyll/jekyll:$JEKYLL_VERSION \
+  jekyll serve
+```
 
-During the staging integration the hotCPR instance will be curl'd for schedule information.
-In case of differences a new commit will be made on `master` with the new information.
+This project uses Github Actions for build and deployment of both staging and production.
+It used to listen for pushes/merges to the branches following the format `0x17-staging` for staging and `0x17` for production. The `master` branch will also deploy to github-pages.
+
+During the staging integration the hotCPR instance will be curl'd for session information.
+In case of differences a new commit will be made on the staging branch with the new information.
 
 ### Github Secrets
 The CI/CD pipeline makes use of some sensitive information that must be secured with 
 Github secrets. The following secrets are required:
 
 ```
-HOTCRP_URL: ip and port of the hotCPR instance
+HOTCRP_URL: ip and port of the 0x16 hotCPR instance
 HOTCRP_USER: the email of an user with admin privileges
 HOTCRP_PASSWORD: the user password
 
-DEPLOY_HOST: the VPS ip address / domain name
-DEPLOY_PORT: the VPS ssh port (usually 22)
-DEPLOY_USER: the VPS user with root privileges
-DEPLOY_PASSWORD: the VPS user password
+HOTCRP_0x17_URL: ip and port of the 0x17 hotCPR instance
+HOTCRP_0x17_USER: the email of an user with admin privileges
+HOTCRP_0x17_PASSWORD: the user password
+
+DEPLOY_HOST: the VPS ip address / domain name for production deploy
+DEPLOY_PATH: the VPS location for production deploy
+DEPLOY_PORT: the VPS ssh port (usually 22) for production deploy
+DEPLOY_USER: the VPS user with for production deploy
+DEPLOY_PRIV_KEY: the private key used for deploy (the user must have this key authorized)
+
+STAGING_HOST: the VPS ip address / domain name for staging deploy
+STAGING_PATH: the VPS location for staging deploy
+STAGING_PORT: the VPS ssh port (usually 22) for staging deploy
+STAGING_USER: the VPS user with for staging deploy
+STAGING_PRIV_KEY: the private key used for deploy (the user must have this key authorized)
 ```
 
 The VPS credentials are used only for scp transfer.
+
 ### Posts
 
 The netdevconf site presents two types of post: [news](#news) and
